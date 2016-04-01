@@ -8,6 +8,9 @@ export default Ember.Component.extend({
         this.sendAction('destroyQuestion', question);
       }
     },
+    update(question, params) {
+      this.sendAction('update', question, params);
+    },
     bodyShow: function() {
       this.set('isBodyShowing', true);
     },

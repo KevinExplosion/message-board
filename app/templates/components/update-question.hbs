@@ -25,9 +25,10 @@
         </div>
       </form>
       <button {{action 'update' question}}>Save Changes</button>
-      <!-- <button {{action 'questionFormHide'}}>Cancel</button> -->
+      <button {{action 'questionFormHide'}}>Cancel</button>
     </div>
   </div>
 {{else}}
   <button {{action 'updateQuestionForm'}}>Update Question</button>
+  <br>
 {{/if}}
