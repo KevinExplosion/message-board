@@ -1,10 +1,13 @@
-<h3>Post your Questions Here</h3>
+<div class="container">
 
-Post your questions for below for other's to answer
+  <h3>Post your Questions Here</h3>
 
-<ul>
-  {{#each model as |question|}}
-    <li>{{question.title}} by {{question.author}} in {{question.subject}}</li>
-      <p>{{question.body}}</p>
-  {{/each}}
-</ul>
+  Post your questions for below for other's to answer
+
+  <ul>
+    {{#each model as |question|}}
+      {{question-tile question = question}}
+    {{/each}}
+  </ul>
+
+</div>
