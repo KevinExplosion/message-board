@@ -6,8 +6,20 @@ export default Ember.Component.extend({
     questionFormShow() {
       this.set('addNewQuestion', true);
     },
+
     questionFormHide() {
       this.set('addNewQuestion', false);
+    },
+
+    save() {
+      var params = {
+        title: this.get('title'),
+        author: this.get('author'),
+        subject: this.get('subject'),
+        body: this.get('body'),
+      };
+      this.set('addNewQuestion', false);
+      this.sendAction('save', params);
     }
   }
 });
