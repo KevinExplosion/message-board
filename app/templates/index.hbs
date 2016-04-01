@@ -1,15 +1,26 @@
 <div class="container">
 
-  <h3>Post your Questions Here</h3>
+  <h3>Post Questions Here</h3>
 
-  Post your questions for below for others to answer
+  <h4>Post your questions for below for others to answer</h4>
 
+  <h6>Click a title to see the question. Click the question to hide it again</h6>
+
+<hr>
   <ul>
-    {{#each model as |question|}}
+    {{#each model.questions as |question|}}
       {{question-tile question=question}}
+      <hr>
     {{/each}}
   </ul>
 
   {{new-question save="save"}}
+
+<ul>
+  <h3>Answers</h3>
+    {{#each model.answers as |answer|}}
+      <li>{{answer.title}}</li>
+    {{/each}}
+</ul>
 
 </div>
