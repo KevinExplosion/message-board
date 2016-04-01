@@ -1,7 +1,9 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  title: DS.belongsTo('questions', { async: true}),
+  answers: DS.hasMany('answer', { async:true }),
+  title: DS.attr(),
   author: DS.attr(),
+  subject: DS.attr(),
   body: DS.attr()
 });
