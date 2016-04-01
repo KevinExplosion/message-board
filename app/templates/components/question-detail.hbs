@@ -1,1 +1,8 @@
-{{yield}}
+<div class="container">
+  <h4>Written by {{question.author}}.</h4>
+
+  <h5>Question Title: {{question.title}}</h5>
+  <h5>subject: {{question.subject}}.</h5>
+
+  <button {{action 'delete' question}}>Delete</button>
+</div>
