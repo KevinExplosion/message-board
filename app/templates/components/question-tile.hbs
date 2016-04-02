@@ -5,6 +5,4 @@
     <p {{action 'bodyHide'}}>{{question.body}}</p>
 {{else}}
     <li {{action 'bodyShow'}}><h4>{{question.title}}</h4> <h5>by   {{question.author}} in {{question.subject}}</h5></li>
-
-    {{question.answer.title}}
 {{/if}}

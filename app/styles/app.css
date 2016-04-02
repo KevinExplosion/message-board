@@ -12,6 +12,10 @@
   padding-left: 10px;
 }
 
+.container {
+  padding-bottom: 10px;
+}
+
 html {
   background-color: #c5eff7;
 }

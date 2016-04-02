@@ -1,0 +1,28 @@
+{{#if addNewAnswer}}
+  <div class="row">
+    <div class="col-md-5">
+      <h3>Answer</h3>
+
+      <form>
+        <div class="form-group">
+          <label for="title">Title</label>
+            {{input value=title id="title"}}
+        </div>
+
+        <div class="form-group">
+          <label for="author">Author</label>
+            {{input value=author id="author"}}
+        </div>
+
+        <div class="form-group">
+          <label for="body">Body</label>
+            {{input value=body id="body"}}
+        </div>
+      </form>
+      <button {{action 'save'}}>Submit</button>
+      <button {{action 'answerFormHide'}}>Cancel</button>
+    </div>
+  </div>
+{{else}}
+  <button {{action 'answerFormShow'}}>New Answer</button>
+{{/if}}
