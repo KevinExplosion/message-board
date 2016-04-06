@@ -7,7 +7,7 @@
 
   <button {{action 'delete' question}}>Delete</button>
 
-  <h3>{{new-answer saveAnswer="saveAnswer"}}</h3>
+  {{new-answer saveAnswer="saveAnswer"}}
     <ul>
       {{#each question.answer as |answer|}}
         <li>{{answer.body}}</li>
