@@ -9,6 +9,16 @@ export default Ember.Component.extend({
 
     answerFormHide() {
       this.set('addNewAnswer', false)
+    },
+
+    saveAnswer() {
+      var params = {
+        title: this.get('title'),
+        author: this.get('author'),
+        body: this.get('body'),
+      };
+      this.set('addNewAnswer', false);
+      this.sendAction('saveAnswer', params);
     }
   }
 });

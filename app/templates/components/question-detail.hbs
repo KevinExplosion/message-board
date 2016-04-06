@@ -6,13 +6,15 @@
   <p>{{question.body}}</p>
 
   <button {{action 'delete' question}}>Delete</button>
+<br>
+<hr>
+<ul>
+  {{#each question.answer as |answer|}}
+  <li>{{answer.body}}</li>
+  <hr>
+  {{/each}}
+</ul>
 
   {{new-answer saveAnswer="saveAnswer"}}
-    <ul>
-      {{#each question.answer as |answer|}}
-        <li>{{answer.body}}</li>
-        <hr>
-      {{/each}}
-    </ul>
 
 </div>
