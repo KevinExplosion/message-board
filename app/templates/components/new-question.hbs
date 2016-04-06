@@ -16,12 +16,12 @@
 
         <div class="form-group">
           <label for="subject">Subject</label>
-          {{input value=subject id="subject"}}
+          {{input type="select" value=subject id="subject"}}
         </div>
 
         <div class="form-group">
           <label for="body">Question</label>
-          {{input value=body id="body"}}
+          {{textarea col="200" row="20" value=body id="body"}}
         </div>
       </form>
       <button {{action 'save'}}>Submit</button>
