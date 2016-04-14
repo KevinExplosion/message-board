@@ -17,3 +17,10 @@
   {{new-question save="save"}}
 
 </div>
+
+<ul>
+  {{#each model.answers as |answer|}}
+    {{answer.body}}
+    <hr>
+  {{/each}}
+</ul>

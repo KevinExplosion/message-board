@@ -1,5 +1,10 @@
-<h3>More Information about {{question.title}}</h3>
+<h3>More Information</h3>
+{{question-detail question=model destroyQuestion="destroyQuestion"}}
 
 {{update-question question=model update="update"}}
 
-{{question-detail question=model destroyQuestion="destroyQuestion"}}
+<!-- {{#each model.answers as |answer|}} -->
+  {{answer-tile answer=answer}}
+  <hr>
+<!-- {{/each}} -->
+{{new-answer saveAnswer="saveAnswer"}}
