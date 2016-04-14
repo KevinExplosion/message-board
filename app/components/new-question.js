@@ -11,7 +11,7 @@ export default Ember.Component.extend({
       this.set('addNewQuestion', false);
     },
 
-    save() {
+    saveQuestion() {
       var params = {
         title: this.get('title') ? this.get('title') : "",
         author: this.get('author') ? this.get('author') : "",
@@ -19,7 +19,7 @@ export default Ember.Component.extend({
         body: this.get('body') ? this.get('body') : "",
       };
       this.set('addNewQuestion', false);
-      this.sendAction('save', params);
+      this.sendAction('saveQuestion', params);
     }
   }
 });
