@@ -3,6 +3,7 @@
     <li><h4>{{fullQuestionTitle}}</h4></li>
   {{/link-to}}
     <p {{action 'bodyHide'}}>{{question.body}}</p>
+    <button {{action 'addToFavorites' question}}>Add to Favorites</button>
 {{else}}
     <li {{action 'bodyShow'}}><h4>{{question.title}}</h4> <h5>by   {{question.author}} in {{question.subject}}</h5></li>
 {{/if}}

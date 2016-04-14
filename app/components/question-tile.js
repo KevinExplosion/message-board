@@ -6,8 +6,12 @@ export default Ember.Component.extend({
   fullQuestionTitle: Ember.computed('question.title', 'question.author', function() {
     return this.get('question.title') + ', by: ' + this.get('question.author');
   }),
-  
+
   actions: {
+    addToFavorites(post) {
+      this.get('favoriteQuestions').add(post);
+    },
+
     delete(question) {
       if(confirm('Would you like to delete this question from the board?')){
         this.sendAction('destroyQuestion', question);
